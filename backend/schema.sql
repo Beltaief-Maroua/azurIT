@@ -1,0 +1,29 @@
+-- DROP DATABASE IF EXISTS azurIT;
+CREATE DATABASE IF NOT EXISTS azurIT;
+USE azurIT;
+
+CREATE TABLE IF NOT EXISTS contact(
+    id INT AUTO_INCREMENT,
+    contactName VARCHAR(999) NOT NULL,
+    contactMail VARCHAR(250) NOT NULL,
+    subject VARCHAR(250) NOT NULL,
+    message VARCHAR(250) NOT NULL,
+    PRIMARY KEY (id)
+   );
+
+CREATE TABLE IF NOT EXISTS client(
+    id INT AUTO_INCREMENT,
+    clientName VARCHAR(250) NOT NULL,
+    clientMail VARCHAR(250) NOT NULL,
+    service VARCHAR(250) NOT NULL,
+    etat VARCHAR(250) NOT NULL,
+    PRIMARY KEY (id)
+   );
+
+CREATE TABLE IF NOT EXISTS admin(
+    id INT NOT NULL AUTO_INCREMENT,
+    adminMail VARCHAR(250) NOT NULL,
+    adminPassword VARCHAR(250) NOT NULL,
+    PRIMARY KEY(id)
+);
+
